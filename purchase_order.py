@@ -55,13 +55,13 @@ class PurchaseOrder:
             if existing_qb_po: # check for any same purchase order existing in Quickbooks to avoid duplication
                 print("There was already a purchase order existing in Quickbooks for the PO Number %s" % (lf_po['po_number']))
                 return False
-            # Finding the item reference from QuickBooks
+            # Finding the item reference from QuickBooks. This is a mandatory to upload the PO to QB. Since we do not get this from Fusion API, we are getting this data from QB. We can hardcode this value if needed.
             item_ref_list = []
             for item_ref in Item.all(qb=client):
                 if item_ref.Taxable and item_ref.PurchaseCost > 0:
                     item_ref_list.append(item_ref)
             if len(item_ref_list) < 1:
-                print("There is no valid item reference found from Quickbooks for the PO Number %s" % (lf_po['po_number']))
+                print("There is no valid item reference found from Quickbooks")
                 return False
             # preparing purchase order lines
             for line in lf_po_lines:
