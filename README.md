@@ -15,7 +15,7 @@ Step 3: Open your project from Pycharm
 
 Step 4: Create a new directory venv_qb (virtual environment) under your project folder and make sure that you have requirements.txt file
 
-Step 5: Go to Pycharm Preferences => Project Interpreter => Click on the setting icon in the top right corner => Add (A new window will be shown) => New Environment => Location > choose the venv_qb file path => ase Interpreter > choose python 3.8
+Step 5: Go to Pycharm Preferences => Project Interpreter => Click on the setting icon in the top right corner => Add (A new window will be shown) => New Environment => Location > choose the venv_qb file path => base Interpreter > choose python 3.8
 
 Step 6: Open terminal, go to your project folder > venv_qb > bin and run the following command.
 
