@@ -6,7 +6,7 @@ future==0.18.2
 idna==2.9
 intuit-oauth==1.2.2
 oauthlib==3.1.0
-pip==19.0.3
+pip==21.1
 pyasn1==0.4.8
 pycparser==2.18
 python-dateutil==2.8.1
