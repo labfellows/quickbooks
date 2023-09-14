@@ -6,30 +6,27 @@
 
 # Python libraries
 import base64
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
 
 class Constant:
     #Keys for accessing Fusion API
-    EMAIL = os.getenv("Q_EMAIL")
-    API_KEY = os.getenv("Q_API_KEY")
-    SUBDOMAIN = os.getenv("Q_SUBDOMAIN")
-    BASE_URL = os.getenv("Q_BASE_URL")
+    EMAIL = '<YOUR_EMAIL_HERE>'
+    API_KEY = '<YOUR_API_KEY_HERE>'
+    SUBDOMAIN = "<YOUR_SUBDOMAIN_HERE>"
+    BASE_URL = "<YOUR_BASE_URL_HERE>"
 
     # Keys for accessing QuickBooks
-    CLIENT_ID = os.getenv("Q_CLIENT_ID")
-    CLIENT_SECRET = os.getenv("Q_CLIENT_SECRET")
-    REFRESH_TOKEN = os.getenv("Q_REFRESH_TOKEN")
-    REDIRECT_URI = os.getenv("Q_REDIRECT_URI")
-    REALM_ID = os.getenv("Q_REALM_ID")
-    COMPANY_ID = os.getenv("Q_COMPANY_ID")
+    CLIENT_ID = '<YOUR_CLIENT_ID_HERE>'
+    CLIENT_SECRET = '<YOUR_CLIENT_SECRET_HERE>'
+    REFRESH_TOKEN = '<YOUR_REFRESH_TOKEN_HERE>'
+    REDIRECT_URI = 'https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl'
+    REALM_ID = '<YOUR_REALM_ID_HERE>'
+    COMPANY_ID = '<YOUR_COMPANY_ID_HERE>'
 
     #Purchase order Constant
     #LF_PO_NUMBER = 'LA-0001'
-    VendorRefName = os.getenv("Q_VendorRefName")
-    APAccountRefName = os.getenv("Q_APAccountRefName")
+    VendorRefName = '<YOUR_VendorRefName_HERE>'
+    APAccountRefName = '<YOUR_APAccountRefName_HERE>'
 
     #API headers
     encoded_auth = base64.b64encode(('%s:%s' % (EMAIL, API_KEY)).encode('utf8')).decode('utf8').replace('\n', '')
